@@ -1,26 +1,72 @@
 # standard_library.py
 """Python Essentials: The Standard Library.
-<Name>
-<Class>
-<Date>
-"""
+<Name> Elaine Swanson
+<Class> MTH 420
+<Date> 1/21/2021"""
 
+import calculator
+from itertools import combinations
+
+print("\n")
 
 # Problem 1
-def prob1(L):
+def min_max_average(L):
     """Return the minimum, maximum, and average of the entries of L
-    (in that order).
-    """
-    raise NotImplementedError("Problem 1 Incomplete")
+    (in that order)."""
+    return min(L), max(L), sum(L)/len(L)
+            
+print(min_max_average((1, 2, 3)))
 
+print("\n")
 
 # Problem 2
 def prob2():
     """Determine which Python objects are mutable and which are immutable.
     Test numbers, strings, lists, tuples, and sets. Print your results.
     """
-    raise NotImplementedError("Problem 2 Incomplete")
+    # Integers are mutable
+    
+    x = int(3.0)
+    y = x
+    y = int(4.0)
+    
+    print("ints are mutable?", y == x)  
+ 
+    # Strings are immutable
+    
+    string_1 = 'I love Python'
+    string_2 = string_1
+    string_2 += '...not'
 
+    print("strings are mutable?", string_2 == string_1)
+  
+    # Lists are mutable
+    
+    list_1 = ["Gil", "Martijn", "Elaine", "Kim"]
+    list_2 = list_1
+    list_2.pop(3)
+    
+    print("lists are mutable?", list_2 == list_1)
+    
+   # Tuples are immutable
+   
+    tuple_1 = (0, 1, 2, 3)
+    tuple_2 = tuple_1 
+    tuple_2 += (1,)
+    
+    print("tuples are mutable?", tuple_1 == tuple_2)
+    
+   # Sets are mutable
+   
+    set_1 = {'a','b','c','d'}
+    set_2 = set_1
+    set_2.add('f')
+    print("sets are mutable?", set_1 == set_2)      
+    return
+
+print(prob2())
+
+print("\n")
 
 # Problem 3
 def hypot(a, b):
@@ -34,8 +80,11 @@ def hypot(a, b):
     Returns:
         The length of the triangle's hypotenuse.
     """
-    raise NotImplementedError("Problem 3 Incomplete")
+    return calculator.sqrt(calculator.sigma(calculator.multiply(a, a), calculator.multiply(b, b)))
+   
+print(hypot(3, 4))
 
+print("\n")
 
 # Problem 4
 def power_set(A):
@@ -47,9 +96,16 @@ def power_set(A):
     Returns:
         (list(sets)): The power set of A as a list of sets.
     """
-    raise NotImplementedError("Problem 4 Incomplete")
+    my_list = list()
+    for i in range(0, len(A)+1):
+        my_list += (combinations(A, i))
+    return my_list        
 
+A = {'a', 'b', 'c', 'd'}
+print(power_set(A))
 
-# Problem 5: Implement shut the box.
-def shut_the_box(player, timelimit):
-    """Play a single game of shut the box."""
+print("\n")
+
+if __name__ == "__main__":
+    print("Lab 2 complete. This was hard.")
+
