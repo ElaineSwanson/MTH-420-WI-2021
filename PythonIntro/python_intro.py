@@ -47,14 +47,14 @@ print(first_half('Elaine'))
 
 print("\n")
 
-def backwards(text):
+def backward(text):
     """Returns the reverse order of inserted text using slicing with
     a negative step parameter in [start:stop:step]"""
     # Negative indices count backward from the end
     # Indexing begins at 0, defaults are beginning for start
     # and end for stop
     return text[::-1]
-print(backwards('Swanson'))
+print(backward('Swanson'))
 
 
 print("\n")
@@ -67,7 +67,7 @@ def list_ops():
     my_list[2] = "fox"
     my_list.pop(1)
     my_list.sort(reverse=True)
-    my_list[2] = "hawk"
+    my_list[1] = "hawk"
     my_list[-1] += "hunter"
     return my_list
 print(list_ops())
