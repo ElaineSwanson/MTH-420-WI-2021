@@ -1,0 +1,37 @@
+01/22/21 15:17
+
+Problem 2 (5 points):
+Score += 5
+
+Problem 3 (5 points):
+Score += 5
+
+Problem 4 (10 points):
+AttributeError: module 'ElaineSwanson.PythonIntro.python_intro' has no attribute 'backward'
+
+Problem 5 (5 points):
+list_ops() failed
+	Correct response: "['fox', 'hawk', 'dog', 'bearhunter']"
+	Student response: "['fox', 'eagle', 'hawk', 'bearhunter']"
+Score += 0
+
+Problem 6 (5 points):
+Score += 5
+
+Problem 7 (10 points):
+Score += 10
+
+Problem 8 (5 points):
+Score += 5
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 35/50 = 70.0%
+
+
+Comments:
+	resubmit
+
+-------------------------------------------------------------------------------
+
