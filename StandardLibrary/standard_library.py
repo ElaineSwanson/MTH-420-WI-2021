@@ -10,12 +10,12 @@ from itertools import combinations
 print("\n")
 
 # Problem 1
-def min_max_average(L):
+def prob1(L):
     """Return the minimum, maximum, and average of the entries of L
     (in that order)."""
     return min(L), max(L), sum(L)/len(L)
             
-print(min_max_average((1, 2, 3)))
+print(prob1((1, 2, 3)))
 
 print("\n")
 
@@ -96,10 +96,11 @@ def power_set(A):
     Returns:
         (list(sets)): The power set of A as a list of sets.
     """
-    my_list = list()
+    my_set = []
     for i in range(0, len(A)+1):
-        my_list += (combinations(A, i))
-    return my_list        
+        for combo in combinations(A, i):
+            my_set.append(set(combo))
+    return my_set        
 
 A = {'a', 'b', 'c', 'd'}
 print(power_set(A))
