@@ -64,3 +64,9 @@ Excellent!
 
 -------------------------------------------------------------------------------
 
+01/28/21 14:39
+
+AttributeError while loading 'standard_library.py': module 'calculator' has no attribute 'sigma'
+
+-------------------------------------------------------------------------------
+
