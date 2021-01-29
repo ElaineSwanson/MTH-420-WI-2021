@@ -29,11 +29,13 @@ print("\n")
 def prob3():
     """Define the matrices A and B as arrays. Calculate the matrix product ABA,
     change its data type to np.int64, and return it."""
-    A = np.triu(np.ones((7, 7), dtype = np.int)
-    B = 5 * np.ones((7, 7), dtype = np.int) - 6 * np.tril(np.ones((7, 7), dtype = np.int))
+    A = np.triu(np.ones((7, 7)))
+    B = 5 * np.ones((7, 7)) - 6 * np.tril(np.ones((7, 7)))
     ABA = np.dot(A, np.dot(B, A))
     C = ABA.astype(np.int64)
     return C
+
+print(prob3())
 
 print("\n")
 
@@ -64,7 +66,16 @@ def prob5():
                                 | B  0  C |
     where I is the 3x3 identity matrix and each 0 is a matrix of all zeros
     of the appropriate size."""
-    
+    D = np.arange(6).reshape((3,2))
+    A = D.T
+    B = np.tril(np.full(3, 3))
+    C = np.diag([-2, -2, -2])
+    I = np.eye(3)
+ 
+    block = np.vstack((np.hstack((np.zeros((3,3)), A.T, I)), np.hstack((A, np.zeros((2,5)))), np.hstack((B, np.zeros((3,2)), C))))
+    return block
+print(prob5())
+
 print("\n")
 
 # Problem 6
@@ -77,8 +88,13 @@ def prob6(A):
         array([[ 0.5       ,  0.5       ,  0.        ],
                [ 0.        ,  1.        ,  0.        ],
                [ 0.33333333,  0.33333333,  0.33333333]])"""
-    
+    y = A.sum(axis=1).reshape(-1,1)
+    B = A / y
+    return B
+
+A = np.array([[3, 4, 5],[2,0,0],[3, 0 ,3]])
+print(prob6(A))
 print("\n")
 
-
-    
+if __name__ == "__main__":
+    print("Lab 3 complete.")
