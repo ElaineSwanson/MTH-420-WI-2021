@@ -1,0 +1,53 @@
+02/05/21 22:57
+
+Problem 1 (5 points):
+regrade
+Score += 1
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (10 points):
+Score += 10
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 46/50 = 92.0%
+
+Great job!
+
+-------------------------------------------------------------------------------
+
+02/05/21 23:15
+
+Problem 1 (5 points):
+Score += 5
+
+Problem 2 (10 points):
+Score += 10
+
+Problem 3 (10 points):
+Score += 10
+
+Problem 4 (10 points):
+Score += 10
+
+Problem 6 (10 points):
+Score += 10
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 50/50 = 100.0%
+
+Excellent!
+
+-------------------------------------------------------------------------------
+
