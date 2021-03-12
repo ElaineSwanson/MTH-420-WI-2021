@@ -10,3 +10,40 @@ SyntaxError while loading 'drazin.py': invalid syntax (drazin.py, line 116)
 
 -------------------------------------------------------------------------------
 
+03/12/21 14:25
+
+Problem 1 (15 points):
+Score += 15
+
+Problem 2 (15 points):
+Score += 15
+
+Problem 3 (15 points):
+effective_resistance(A) failed for A =
+[[0. 1. 0. 0.]
+ [1. 0. 1. 0.]
+ [0. 1. 0. 1.]
+ [0. 0. 1. 0.]]
+	Correct response:
+[[0. 1. 2. 3.]
+ [1. 0. 1. 2.]
+ [2. 1. 0. 1.]
+ [3. 2. 1. 0.]]
+	Student response:
+[[ 0.     0.125 -0.375 -0.625]
+ [ 0.125  0.    -0.125 -0.375]
+ [-0.375 -0.125  0.     0.125]
+ [-0.625 -0.375  0.125  0.   ]]
+TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 35/50 = 70.0%
+
+
+Comments:
+	see hint at top of p143, compute column by column
+
+-------------------------------------------------------------------------------
+
