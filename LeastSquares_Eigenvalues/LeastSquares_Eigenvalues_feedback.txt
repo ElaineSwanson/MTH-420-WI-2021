@@ -10,3 +10,24 @@ lstsq_eigs.py has not been modified yet
 
 -------------------------------------------------------------------------------
 
+03/12/21 14:32
+
+Problem 1 (10 points):
+Score += 10
+
+Problem 2 (15 points):
+slope and intercept reversed
+Score += 12
+
+Problem 3 (20 points):
+Score += 20
+
+Code Quality (5 points):
+Score += 5
+
+Total score: 47/50 = 94.0%
+
+Great job!
+
+-------------------------------------------------------------------------------
+
