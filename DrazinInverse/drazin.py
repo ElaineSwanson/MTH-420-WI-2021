@@ -101,20 +101,17 @@ def effective_resistance(A):
 
     Returns:
         ((n,n) ndarray) The matrix where the ijth entry is the effective
-        resistance from node i to node j.
-    """
-    n, n = np.shape(A)
-    D = np.zeros(n)
-    for i in range(n):
-        D[i] = np.sum(A[:,i])
-    
-    D = np.diag(D)
-    L = np.subtract(D, A)
-    Ld = drazin_inverse(L, tol=1e-4)
-    Ri,Rj = np.shape(Ld)
-    
-    for j in range(Rj):
-        Ld[j,j] = 0
-        
-    return Ld
+        resistance from node i to node j."""
+    n = np.shape(A)[0]
+    D = np.diag(np.sum(A, axis=1))
+    L = np.subtract(D, A) #Laplacian
+    I = np.eye(n)
+    R = np.zeros_like(A, dtype=np.float64) #must be float
+    for j in range(n):
+        Lt = L.copy() #replace ith row
+        Lt[:,j] = I[:,j]       
+        Ld = drazin_inverse(Lt)
+        R[:,j] = np.diagonal(Ld) #replace ith column of R with diagonal of Drazin inverse.
+        R[j,j] = 0
+    return R
 print(effective_resistance(A))
